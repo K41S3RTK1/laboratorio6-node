@@ -45,25 +45,45 @@ Las pruebas se realizaron desde el navegador accediendo a `http://localhost:3000
 ### Prueba de `http://localhost:3000/`
 Respuesta obtenida:
 `Servidor activo`
+<img width="672" height="173" alt="cap 1" src="https://github.com/user-attachments/assets/752f720a-8624-4186-b551-abb58fb8f5d0" />
+
+
+
 
 ### Prueba de `http://localhost:3000/info`
 Respuesta obtenida:
 Un JSON con el mensaje, el curso y la tecnología.
 
+<img width="1029" height="193" alt="cap info" src="https://github.com/user-attachments/assets/295c1629-11de-4284-b2d0-f9edc804ce2a" />
+
+
+
 ### Prueba de `http://localhost:3000/saludo`
 Respuesta obtenida:
 Un mensaje de bienvenida en texto plano.
+
+<img width="1017" height="133" alt="cap saludo" src="https://github.com/user-attachments/assets/035f2c45-2291-4059-affa-6ff6b2c94fd3" />
+
 
 ### Prueba de `http://localhost:3000/api/status`
 Respuesta obtenida:
 Un JSON con el estado del servidor y el puerto 3000.
 
+<img width="1026" height="191" alt="cap api status" src="https://github.com/user-attachments/assets/c5cf8552-eab4-432a-b685-8570efb5042b" />
+
+
 ### Prueba de `http://localhost:3000/api/student`
 Respuesta obtenida:
 Un JSON con los datos almacenados en el archivo `datos.json`.
 
+<img width="1015" height="204" alt="cap api student" src="https://github.com/user-attachments/assets/4c4d3f23-68c3-45dc-b2ce-0c97f38f50ae" />
+
+
 ### Prueba de ruta inexistente
 Se probó una ruta inexistente y el servidor respondió mostrando la ruta no encontrada con código 404.
+
+<img width="1016" height="135" alt="cap 404" src="https://github.com/user-attachments/assets/94a682ec-fcfb-4d84-b1dd-5dbc54687a5a" />
+
 
 ## Tecnologías usadas
 - Node.js
