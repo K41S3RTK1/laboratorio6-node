@@ -42,7 +42,7 @@ const server = http.createServer(async (req, res) => {
   }
 
   res.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
-  res.end("Ruta no encontrada");
+  res.end(`Ruta no encontrada: ${req.url}`);
 });
 
 server.listen(PORT, () => {
