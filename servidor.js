@@ -23,6 +23,12 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
+    if (req.url === "/saludo") {
+    res.writeHead(200, { "Content-Type": "text/plain; charset=utf-8" });
+    res.end("Hola, bienvenido a mi servidor de prueba de Node.js");
+    return;
+  }
+
   if (req.url === "/api/student") {
     try {
       const filePath = path.join(process.cwd(), "datos.json");
