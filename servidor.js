@@ -12,8 +12,14 @@ const server = http.createServer(async (req, res) => {
   }
 
   if (req.url === "/info") {
-    res.writeHead(200, { "Content-Type": "text/plain; charset=utf-8" });
-    res.end("Ruta de información");
+    const info = {
+      mensaje: "Ruta de información del laboratorio",
+      curso: "Sistemas y Tecnologías Web",
+      tecnologia: "Node.js"
+    };
+
+    res.writeHead(200, { "Content-Type": "application/json; charset=utf-8" });
+    res.end(JSON.stringify(info, null, 2));
     return;
   }
 
