@@ -23,7 +23,7 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-    if (req.url === "/saludo") {
+  if (req.url === "/saludo") {
     res.writeHead(200, { "Content-Type": "text/plain; charset=utf-8" });
     res.end("Hola, bienvenido a mi servidor de prueba de Node.js");
     return;
@@ -38,6 +38,21 @@ const server = http.createServer(async (req, res) => {
 
     res.writeHead(200, { "Content-Type": "application/json; charset=utf-8" });
     res.end(JSON.stringify(statusInfo, null, 2));
+    return;
+  }
+
+  if (req.url === "/api/student") {
+    try {
+      const filePath = path.join(process.cwd(), "datos.json");
+      const texto = await fs.readFile(filePath, "utf-8");
+      const datos = JSON.parse(texto);
+
+      res.writeHead(200, { "Content-Type": "application/json; charset=utf-8" });
+      res.end(JSON.stringify(datos, null, 2));
+    } catch (error) {
+      res.writeHead(500, { "Content-Type": "application/json; charset=utf-8" });
+      res.end(JSON.stringify({ error: "No se pudo leer datos.json" }, null, 2));
+    }
     return;
   }
 
